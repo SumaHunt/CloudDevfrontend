@@ -1,0 +1,21 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  createserver:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Template
+        uses: actions/checkout@main
+
+      - name: Login
+        uses: azure/login@v1
+        with:
+          creds: $({secrets.AZURE_CREDS})
+
+      - name: Deploy
+        uses: azure/arm-deploy@v1
+        with:
+          subscriptionId: 793ca10c-fee7-4af8-b004-aa977cb5afb0
+          resourceGroupName: CloudDevAssignments
+          template: ../templates/frontendwebapp.json

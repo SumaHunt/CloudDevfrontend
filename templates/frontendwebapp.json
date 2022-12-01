@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "staticSites_Mywebapp_name": {
-            "defaultValue": "Mywebapp1",
+            "defaultValue": "Mywebapp2",
             "type": "String"
         }
     },
@@ -12,7 +12,7 @@
         {
             "type": "Microsoft.Web/staticSites",
             "apiVersion": "2022-03-01",
-            "name": "Mywebapp1",
+            "name": "Mywebapp2",
             "location": "Central US",
             "sku": {
                 "name": "Free",
